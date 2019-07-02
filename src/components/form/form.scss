@@ -1,0 +1,66 @@
+input[name=URL] {
+  width: 100%;
+}
+
+form #methods {
+  display: flex;
+  margin: 1em 0;
+
+  label {
+    cursor: pointer;
+  }
+
+  input[type=radio] {
+    display: none;
+  }
+
+  input[type=radio]:checked+span {
+    background: #2d5986;
+    color: #eee;
+    border: 1px groove #ccc;
+  }
+
+  span {
+    padding: .25em 1em;
+  }
+}
+
+textarea {
+  display: block;
+  height: 10em;
+  width: 100%;
+
+  [disabled] {
+    background: #ccc;
+  }
+}
+
+section.deck {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+
+@media (max-width: 768px) {
+  #methods {
+    label {
+      margin-right: .2em;
+    }
+
+    span {
+      padding: .25em .5em;
+    }
+  }
+
+  section.deck {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+  }
+
+  textarea {
+    height: 6em;
+  }
+}
